@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class TestAPI {
     private static String API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
-    private static String apiKey = "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";
+    private static String apiKey = "YOUR_API_KEY";
 
     public String getApiKey(){
         return apiKey;
