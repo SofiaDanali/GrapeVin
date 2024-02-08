@@ -48,10 +48,3 @@ This algorithm ensures that users receive personalized wine recommendations tail
 
 The `frontend` folder contains the frontend code for the GrapeVin application. However, please note that it has not been successfully connected to the main program yet. The code in this folder serves as an initial draft for the frontend and may require further development and integration to function properly with the backend.
 
-## Frontend Code
-
-We have included an "frontend" folder in the repository, which contains the initial draft of the frontend code for our application. However, please note that this frontend code has not been successfully connected to the main program yet. It serves as an initial draft for the frontend interface and may undergo further development and integration in the future.
-
-Feel free to explore the contents of the "frontend" folder, but please be aware that it is currently disconnected from the main program.
-
-
