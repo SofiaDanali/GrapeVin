@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SQLConnection  {
-    private static String URL = "jdbc:mysql://localhost:3306/winedb";
-    private static String USERNAME = "root";
-    private static String PASSWORD = "Foolcavetown201";
+    private static String URL;
+    private static String USERNAME;
+    private static String PASSWORD;
     protected Connection conn;
 
     public SQLConnection (String url, String username, String password) throws ClassNotFoundException {
