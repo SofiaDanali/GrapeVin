@@ -22,3 +22,26 @@ To test the application on a local system, the following basic steps need to be 
 ## UML Diagram
 ![UML Diagram](UML.png)
 
+## Algorithm Description
+
+The GrapeVin application follows a specific algorithm to provide wine recommendations to users based on their preferences. Below is a step-by-step explanation of the algorithm:
+
+1. **User Authentication**: When a user accesses GrapeVin, they are prompted to either log in or register for an account.
+
+2. **Questionnaire**: After authentication, the user is presented with a questionnaire where they need to answer various questions related to their wine preferences. These questions typically inquire about factors such as color, flavor, and preferred experiences.
+
+3. **Request Generation**: Once the questionnaire is completed, the user's responses, particularly those indicating the color and flavor of the desired wine, are embedded in a request string.
+
+4. **Interaction with GPT-3.5 API**: The program sends the request string containing the user's preferences to the GPT-3.5 model through a REST API provided by the user. This API call aims to generate wine recommendations based on the user's input.
+
+5. **Parsing and Filtering**: Upon receiving a response from the GPT-3.5 model, the program parses the data and filters out relevant information. It then saves this data in the database after ensuring proper validation and control over which tables the data should be stored in.
+
+6. **Secondary Request Generation**: Additionally, the program generates another request containing all the user's responses and the data corresponding to the color of the wine chosen previously. This request aims to refine the recommendations further.
+
+7. **Final Recommendations**: Finally, the program receives a response to the secondary request, containing refined wine recommendations. These recommendations are then displayed to the user, typically listing the top choices based on their preferences.
+
+8. **Conclusion**: After presenting the recommendations to the user, the program closes the database connection and concludes the interaction.
+
+This algorithm ensures that users receive personalized wine recommendations tailored to their preferences, enhancing their experience with the GrapeVin application.
+
+
