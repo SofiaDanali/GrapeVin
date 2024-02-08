@@ -22,7 +22,7 @@ The GrapeVin application operates using any integrated development environment (
 
 ## Testing Procedure
 To test the application on a local system, the following basic steps need to be followed:
-1. Database Creation: Create a MySQL database with which GrapeVin will interact. The name of this database can be arbitrary, but we suggest the existing name. You will find the "winedb" file containing the query for managing the tables. Create the tables by executing the CREATE commands.
+1. Database Creation: Create a MySQL database with which GrapeVin will interact. The name of this database can be arbitrary, but we suggest the existing name. You will find the `winedb` file containing the query for managing the tables. Create the tables by executing the CREATE commands.
 2. Program Configuration: GrapeVin requires both connection to the database and an API key for using GPT-3.5. The appropriate details should be filled in the Main and TestAPI classes where specified.
    For creating an API key, refer here: [OpenAI API](https://openai.com/blog/openai-api)
 3. Compilation of the application: The command from the terminal for compiling the application is mvn package. You may need to use mvn clean package if there are any changes to the code.
