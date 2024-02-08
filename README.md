@@ -1,10 +1,8 @@
 # GrapeVin – Wine Recommendation System
 
 ## General Idea
-The "GrapeVin" application is a comprehensive web application aiming to recommend wine labels to users based on their personal preferences. 
-Specifically, utilizing the GPT-3.5 artificial intelligence model, wines are selected to match the responses of a questionnaire that each user 
-is asked to complete. This questionnaire can be filled out multiple times, giving users the opportunity to explore the various recommendations 
-provided by the application. The following features are provided:
+The "GrapeVin" application is a comprehensive web application aiming to recommend wine labels to users based on their personal preferences. Specifically, utilizing the GPT-3.5 artificial intelligence model, wines are selected to match the responses of a questionnaire that each user is asked to complete. This questionnaire can be filled out multiple times, giving users the opportunity to explore the various recommendations provided by the application.
+The following features are provided:
 - Account Registration & Login
 - Update Personal Profile (Name & Surname)
 - Complete/Update Questionnaire
