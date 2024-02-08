@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Scanner sc = new Scanner(System.in);
-        SQLConnection conn = new SQLConnection("jdbc:mysql://localhost:3306/winedb", 
-                                            "root", 
-                                            "Foolcavetown201");
+        SQLConnection conn = new SQLConnection("jdbc:mysql://localhost:3306/winedb", // Change 'winedb' if you use different name
+                                            "YOUR_MYSQL_USERNAME", 
+                                            "YOUR_MYSQL_PASSWORD");
         System.out.println("Welcome to ...");
         System.out.println("\r\n" + //
                         "█████▀███████████████████████████████████████████\r\n" + //
