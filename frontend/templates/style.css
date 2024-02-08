@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    color: rgb(83, 184, 113);
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+    text-transform: capitalize;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.section1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: bisque;
+    align-items: center;
+    justify-content: center;    
+}
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0%;
+    transform: translateY(0%);
+    text-align: center;
+    color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.card-front, .card-back{
+    background-color: rgba(60, 147, 86, 0.409);
+    width: 500px;
+    height: 430px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+.card-back{
+    transform: rotateY(-180deg);
+}
+.card-front h3{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+}
+.card-front .register-link{
+    font-size: 14px;
+    color: bisque;
+    text-align: center;
+    margin-top: 50px;
+}
+.register-link p a {
+    color: bisque;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+.card-back h3{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+.card-back .login-link{
+    font-size: 14px;
+    color: bisque;
+    text-align: center;
+    margin-top: 35px;
+}
+.login-link button{
+    width: 80px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: normal;
+    border: 1px solid #8bd502;
+    background: transparent;
+    color: beige;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.register-link button{
+    width: 80px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: normal;
+    border: 1px solid #8bd502;
+    background: transparent;
+    color: beige;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.input-box{
+    width: 70%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 6px 0;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: bisque;
+}
+.input-box:hover{
+    border: 2px solid #009688;
+    box-shadow: 0 0 4px 2px #009688;
+}
+::placeholder{
+    color: bisque;
+    font-size: 12px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: beige;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.section2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.about-content{
+    width: 100%;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: bisque;
+    align-items: center;
+    justify-content: center;    
+}
+.section3{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background-3.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.contact-content{
+    width: 100%;
+    position: relative;
+    top: 20%;
+    transform: translateY(-20%);
+    text-align: center;
+    color: bisque;
+}
+form{
+    max-width: 1000px;
+    top: 20%;
+    transform: translateY(-20%);
+    position: relative;    
+    align-items: center;
+    justify-content: center;
+}
+.input-data{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    position: relative;
+}
+input, textarea{
+    width: 30%;
+    margin: -15px;
+    padding: 15px;
+    outline: 0;
+    border: 1px solid aquamarine;
+    border-radius: 10px;
+    color: bisque;
+    background: transparent;
+    font-size: 12px;
+}
+input:hover{
+    border: 2px solid #009688;
+    box-shadow: 0 0 4px 2px #009688;
+}
+textarea:hover{
+    border: 2px solid #009688;
+    box-shadow: 0 0 4px 2px #009688;
+}

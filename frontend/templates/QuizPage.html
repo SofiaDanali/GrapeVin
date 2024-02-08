@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GrapeVin-Quiz</title>
+    <link rel="stylesheet" href="QuizStyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1><a href="index.html#section1" style="text-decoration: none; color: rgb(83, 184, 113);">GrapeVin</a></h1>
+        </div>
+        <ul>
+            <li><a href="index.html#section1">Home</a></li>
+            <li><a href="index.html#section2">About</a></li>
+            <li><a href="index.html#section3">Contact</a></li>
+        </ul>
+    </div>
+    <div class="app">
+        <h1>Wine Quiz</h1>
+        <div class="quiz">
+            <div id="question1">
+                <h2>Which meal do you prefer? </h2>
+                <div id="answer-buttons1">
+                    <button class="btn" onclick="selectAnswer(1, 'Chicken')">Chicken</button>
+                    <button class="btn" onclick="selectAnswer(1, 'Red meat')">Red meat</button>
+                    <button class="btn" onclick="selectAnswer(1, 'A plate of cheeses')">A plate of cheeses</button>
+                </div>
+            </div>
+            <div id="question2" style="display: none;">
+                <h2>Which flavor do you mostly prefer? </h2>
+                <div id="answer-buttons2">
+                    <button class="btn" onclick="selectAnswer(2, 'Fruity')">Fruity</button>
+                    <button class="btn" onclick="selectAnswer(2, 'Dry')">Dry</button>
+                    <button class="btn" onclick="selectAnswer(2, 'Very sweet')">Very sweet</button>
+                </div>
+            </div>
+            <div id="question3" style="display: none;">
+                <h2>In which occasions do you enjoy wine the most? </h2>
+                <div id="answer-buttons3">
+                    <button class="btn" onclick="selectAnswer(3, 'During meals')">During meals</button>
+                    <button class="btn" onclick="selectAnswer(3, 'Social gatherings')">Social gatherings</button>
+                    <button class="btn" onclick="selectAnswer(3, 'During relaxation')">During relaxation</button>
+                </div>
+            </div>
+            <div id="question4" style="display: none;">
+                <h2>Do you prefer red, white, or rosé wines? </h2>
+                <div id="answer-buttons4">
+                    <button class="btn" onclick="selectAnswer(4, 'Red')">Red</button>
+                    <button class="btn" onclick="selectAnswer(4, 'White')">White</button>
+                    <button class="btn" onclick="selectAnswer(4, 'Rosé')">Rosé</button>
+                </div>
+            </div>
+            <div id="question5" style="display: none;">
+                <h2>What is your favorite wine experience? </h2>
+                <div id="answer-buttons5">
+                    <button class="btn" onclick="selectAnswer(5, 'Summer vacations')">Summer vacations</button>
+                    <button class="btn" onclick="selectAnswer(5, 'Social evening')">Social evening</button>
+                    <button class="btn" onclick="selectAnswer(5, 'Other')">Other</button>
+                </div>
+            </div>
+
+            <div id="buttons">
+                <button id="back-btn" onclick="showPreviousQuestion()" style="display: none;">Back</button>
+                <button id="next-btn" onclick="showNextQuestion()" style="display: none;">Next</button>
+                <button id="get-results-btn" onclick="getResults()" style="display: none;">Get Results</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        let selectedAnswers = {};
+
+        function showNextQuestion() {
+            // Hide the current question
+            document.getElementById(`question${currentQuestion}`).style.display = 'none';
+
+            // Move to the next question
+            currentQuestion++;
+
+            // Show the next question
+            document.getElementById(`question${currentQuestion}`).style.display = 'block';
+
+            // Show/hide buttons based on the current question
+            updateButtons();
+
+            // Highlight the selected answer, if any
+            highlightSelectedAnswer();
+        }
+
+        function showPreviousQuestion() {
+            // Hide the current question
+            document.getElementById(`question${currentQuestion}`).style.display = 'none';
+
+            // Move to the previous question
+            currentQuestion--;
+
+            // Show the previous question
+            document.getElementById(`question${currentQuestion}`).style.display = 'block';
+
+            // Show/hide buttons based on the current question
+            updateButtons();
+
+            // Highlight the selected answer, if any
+            highlightSelectedAnswer();
+        }
+
+        function selectAnswer(questionNumber, answer) {
+            // Handle user's answer
+            selectedAnswers[questionNumber] = answer;
+
+            // Highlight the selected answer
+            highlightSelectedAnswer();
+
+            // Show/hide buttons based on the current question
+            updateButtons();
+        }
+
+        function updateButtons() {
+            // Show/hide "Next" and "Back" buttons based on the current question
+            document.getElementById('next-btn').style.display = (currentQuestion < 5) ? 'block' : 'none';
+            document.getElementById('back-btn').style.display = (currentQuestion > 1) ? 'block' : 'none';
+
+            // Change the "Next" button text on the last question
+            if (currentQuestion === 5) {
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('get-results-btn').style.display = 'block';
+            } else {
+                document.getElementById('get-results-btn').style.display = 'none';
+            }
+        }
+
+        function highlightSelectedAnswer() {
+            // Remove highlighting from all buttons
+            for (let i = 1; i <= 5; i++) {
+                const buttons = document.getElementById(`answer-buttons${i}`).getElementsByTagName('button');
+                for (const button of buttons) {
+                    button.classList.remove('selected');
+                }
+            }
+
+            // Highlight the selected answer
+            if (selectedAnswers[currentQuestion]) {
+                const selectedButton = document.querySelector(`#answer-buttons${currentQuestion} button[data-answer="${selectedAnswers[currentQuestion]}"]`);
+                if (selectedButton) {
+                    selectedButton.classList.add('selected');
+                }
+            }
+        }
+    function getResults() {
+        // Redirect to Login.html or update with the desired URL
+        window.location.href = "index.html#section1";  // You may need to adjust the anchor depending on your page structure
+    }
+</script>
+    </script>
+</body>
+</html>
+
+
+
