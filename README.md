@@ -20,4 +20,6 @@ To test the application on a local system, the following basic steps need to be 
 4. Execution of the program: Once the project is saved and compiled, the execution command is java -jar target/gen5-1.0-SNAPSHOT.jar or f5 in an IDE environment.
 
 ## UML Diagram
-![UML Diagram](GrapeVin/uml class diagram final.png)
+## UML Diagram
+![UML Diagram](uml_class_diagram_final.png)
+
